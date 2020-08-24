@@ -64,7 +64,7 @@ const useStyles = makeStyles((theme: Theme) =>
       top: 0,
       bottom: 0,
       backgroundColor: theme.palette.common.black,
-      opacity: 0.4,
+      opacity: 0.2,
       transition: theme.transitions.create("opacity")
     },
     imageTitle: {
