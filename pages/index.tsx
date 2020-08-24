@@ -8,7 +8,7 @@ import { store } from "../store"
 const ShoppingBasket = () => {
   return (
     <Provider store={store}>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <Box mt={5} mb={5}>
           <Product />
         </Box>
