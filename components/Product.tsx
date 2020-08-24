@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography"
 
 import { ProductItem } from "../global"
 import { useSelector } from "react-redux"
+import { store, add } from "../store"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -98,10 +99,10 @@ const Product = () => {
           disabled={product.added}
           onClick={() => {
             /* Add to basket */
+            store.dispatch(add(product))
           }}
           style={{
-            width: '40%'
-            // width: `${100 / products.length}%`
+            width: '45%'
           }}
         >
           <span
