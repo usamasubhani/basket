@@ -4,6 +4,7 @@ import ButtonBase from "@material-ui/core/ButtonBase"
 import Typography from "@material-ui/core/Typography"
 
 import { ProductItem } from "../global"
+import { useSelector } from "react-redux"
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -15,10 +16,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     image: {
       position: "relative",
-      height: 200,
-      [theme.breakpoints.down("xs")]: {
+      height: 400,
+      margin: 20,
+      [theme.breakpoints.down("sm")]: {
         width: "100% !important", // Overrides inline-style
-        height: 100
+        height: 300
       },
       "&:hover, &$focusVisible": {
         zIndex: 1,
@@ -83,7 +85,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const Product = () => {
   const classes = useStyles({})
 
-  const products = [] // TODO
+  const products = useSelector((state: ProductItem[]) => state)
 
   return (
     <div className={classes.root}>
@@ -98,7 +100,8 @@ const Product = () => {
             /* Add to basket */
           }}
           style={{
-            width: `${100 / products.length}%`
+            width: '40%'
+            // width: `${100 / products.length}%`
           }}
         >
           <span
