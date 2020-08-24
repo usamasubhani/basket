@@ -1,1 +1,7 @@
-# Shopping basket using React and Redux Toolkit
+# Shopping basket
+
+Using
+- React
+- TypeScript
+- Redux Toolkit
+
